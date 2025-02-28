@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A powerful image search tool with infinite scrolling">
+    <title>Image Explorer: Search & Scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Image Explorer</h1>
+        <form class="search-container" id="search-form">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search images..."
+                aria-label="Search for images"
+                required
+            >
+            <button 
+                type="submit" 
+                id="search-button"
+                aria-label="Submit search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span class="sr-only">Search</span>
+            </button>
+        </form>
+    </header>
+
+    <main>
+        <div id="image-container"></div>
+        <p id="no-results" class="message">No images found. Try a different search.</p>
+        <div id="error-message" class="message"></div>
+        <div id="loader"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
